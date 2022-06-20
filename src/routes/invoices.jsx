@@ -1,11 +1,12 @@
 import { Outlet, useSearchParams } from "react-router-dom"
 //copied this querynavlink component to persist search field after a Navlink is clicked
-import { QueryNavLink } from "../querynavlink"
+import QueryNavLink, {IamFive}  from "../querynavlink"
 import { getInvoices } from "../data"
 
 export default function Invoices() {
     let invoices = getInvoices()
     let [searchParams, setSearchParams] = useSearchParams()
+    console.log(IamFive())
 
     return (
         <div style={{ display: 'flex' }}>
